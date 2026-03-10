@@ -55,6 +55,92 @@
             color: #16a34a;
         }
 
+        .labs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .lab-card {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .lab-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .lab-card-preview {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        .lab-card-body {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .lab-card-body h3 {
+            color: #16a34a;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .lab-card-body p {
+            color: #666;
+            font-size: 0.95rem;
+            flex: 1;
+            margin-bottom: 1.25rem;
+        }
+
+        .lab-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .lab-tag {
+            background: #f0fdf4;
+            color: #16a34a;
+            border: 1px solid #bbf7d0;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            font-weight: 500;
+        }
+
+        .lab-card-link {
+            display: inline-block;
+            padding: 0.6rem 1.4rem;
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            align-self: flex-start;
+        }
+
+        .lab-card-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
+        }
+
         main {
             flex: 1;
             max-width: 1200px;
@@ -171,6 +257,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#labs">Labs</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -233,6 +320,26 @@
                 <div class="feature-card">
                     <h3>🎤 Rapping</h3>
                     <p>I enjoy writing and performing rap music. It's an exciting way to combine rhythm, poetry, and self-expression.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero" id="labs" style="margin-top: 2rem;">
+            <h2>Labs</h2>
+            <p style="font-size: 1rem; color: #666; margin-bottom: 0;">Small experiments and side projects I build for fun.</p>
+            <div class="labs">
+                <div class="lab-card">
+                    <div class="lab-card-preview">🎵</div>
+                    <div class="lab-card-body">
+                        <h3>Audio Player</h3>
+                        <p>A glassmorphism-styled music player with waveform animation, cover art spin, progress scrubbing, and volume control. Built with React and pure CSS.</p>
+                        <div class="lab-tags">
+                            <span class="lab-tag">React</span>
+                            <span class="lab-tag">Vite</span>
+                            <span class="lab-tag">CSS</span>
+                        </div>
+                        <a href="labs/audio-player/" target="_blank" class="lab-card-link">Try it →</a>
+                    </div>
                 </div>
             </div>
         </section>
