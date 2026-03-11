@@ -1,0 +1,69 @@
+.about-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bio {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.bio strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.contact-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.contact-row {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.contact-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+  min-width: 44px;
+}
+
+.contact-value {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.contact-value.link:hover {
+  color: var(--accent);
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.social-link {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 4px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.social-link:hover {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+}

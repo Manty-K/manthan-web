@@ -1,0 +1,81 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f4f2ed;
+  --surface: #faf9f7;
+  --border: #e2dfd8;
+  --text-primary: #111111;
+  --text-secondary: #4a4a4a;
+  --text-muted: #999999;
+  --hover-bg: rgba(0, 0, 0, 0.05);
+  --accent: #16a34a;
+  --sidebar-width: 256px;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg: #141412;
+  --surface: #1c1b18;
+  --border: #2c2a25;
+  --text-primary: #f0ede6;
+  --text-secondary: #a8a49b;
+  --text-muted: #6b6760;
+  --hover-bg: rgba(255, 255, 255, 0.06);
+}
+
+/* Auto: follow system preference */
+@media (prefers-color-scheme: dark) {
+  [data-theme="auto"] {
+    --bg: #141412;
+    --surface: #1c1b18;
+    --border: #2c2a25;
+    --text-primary: #f0ede6;
+    --text-secondary: #a8a49b;
+    --text-muted: #6b6760;
+    --hover-bg: rgba(255, 255, 255, 0.06);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Shared section styles used across all sections */
+.section {
+  padding-bottom: 56px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 56px;
+}
+
+.section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
