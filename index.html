@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&');
+          });
+          window.history.replaceState(null, null,
+            decoded[0] + (decoded[1] ? '&' + decoded[1] : '') + l.hash
+          );
+        }
+      }(window.location));
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Manthan Khandale - Software Developer · Flutter · Agentic AI" />
@@ -17,8 +29,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/assets/index-0tLzmDhg.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DA98lFZW.css">
+    <script type="module" crossorigin src="/assets/index-BLCPR42Z.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-VhrnB1Lg.css">
   </head>
   <body>
     <div id="root"></div>
